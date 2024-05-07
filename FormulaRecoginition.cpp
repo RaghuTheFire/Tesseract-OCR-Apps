@@ -79,14 +79,14 @@ int main()
     for (const auto & cnt: cnts) 
     {
       Rect rect = boundingRect(cnt);
-      if (rect.width >= 13 && rect.height >= 13) {
+      if (rect.width >= 13 && rect.height >= 13) 
+      {
         rectangle(frame, rect, Scalar(0, 0, 255), 1);
-        Mat detected_part = dist_norm(Rect(max(rect.x - 13, 0), max(rect.y - 13, 0),
-          min(rect.width + 26, dist_norm.cols - rect.x + 13),
-          min(rect.height + 26, dist_norm.rows - rect.y + 13)));
+        Mat detected_part = dist_norm(Rect(max(rect.x - 13, 0), max(rect.y - 13, 0),min(rect.width + 26, dist_norm.cols - rect.x + 13),min(rect.height + 26, dist_norm.rows - rect.y + 13)));
         ocr.SetImage(detected_part.data, detected_part.cols, detected_part.rows, 1, detected_part.step);
         string part_pred = string(ocr.GetUTF8Text());
-        if (!part_pred.empty()) {
+        if (!part_pred.empty()) 
+        {
           texts.push_back(part_pred);
         }
       }
@@ -135,9 +135,7 @@ int main()
       rectangle(frame, rect, Scalar(0, 0, 255), 1);
 
       // Perform OCR on the equation
-      Mat detected_part = dist_norm(Rect(max(rect.x - 10, 0), max(rect.y - 10, 0),
-        min(rect.width + 20, dist_norm.cols - rect.x + 10),
-        min(rect.height + 20, dist_norm.rows - rect.y + 10)));
+      Mat detected_part = dist_norm(Rect(max(rect.x - 10, 0), max(rect.y - 10, 0),min(rect.width + 20, dist_norm.cols - rect.x + 10),min(rect.height + 20, dist_norm.rows - rect.y + 10)));
       ocr.SetImage(detected_part.data, detected_part.cols, detected_part.rows, 1, detected_part.step);
       string part_pred = string(ocr.GetUTF8Text());
 
@@ -149,11 +147,13 @@ int main()
         string equation_str = part_pred;
         transform(equation_str.begin(), equation_str.end(), equation_str.begin(), ::tolower);
         vector < Point > points;
-        for (int x = -68; x < 68; x++) {
+        for (int x = -68; x < 68; x++) 
+        {
           double y = eval(equation_str, x);
           int x_new = x + 68;
           int y_new = static_cast < int > (-y / 3 + 68);
-          if (y_new < 135) {
+          if (y_new < 135) 
+          {
             points.emplace_back(x_new, y_new);
           }
         }
