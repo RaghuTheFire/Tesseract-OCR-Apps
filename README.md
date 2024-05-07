@@ -16,7 +16,7 @@ Many applications and services use Tesseract OCR for tasks such as converting sc
 
 
 
-# Formula-Recoginition
+# FormulaRecoginition.cpp
 
 This project is about recognizing a hand written maths formula on a board of chart showing the camera towards what your write. 
 
