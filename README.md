@@ -1,5 +1,7 @@
 # Formula-Recoginition
 
+This project is about recognizing a hand written maths formula on a board of chart showing the camera towards what your write. 
+
 This C++ code performs following Tasks:
 
 1. Opening a video capture and creating a video writer.
