@@ -1,3 +1,21 @@
+Tesseract OCR (Optical Character Recognition) is an open-source library primarily used to recognize and extract text from images. It was originally developed by HP in the 1980s and later released as open-source software by Google in 2006. Since then, it has been maintained by Google and a community of developers.
+
+Here’s how Tesseract OCR generally works:
+
+    Image Preprocessing: Before performing OCR, the image may need preprocessing steps like resizing, noise reduction, and contrast enhancement to improve recognition accuracy.
+
+    Text Detection: Tesseract locates regions in the image that potentially contain text using techniques like connected component analysis and edge detection.
+
+    Text Recognition: Once text regions are identified, Tesseract analyzes the shapes of individual characters and attempts to recognize them using machine learning algorithms, typically based on neural networks.
+
+    Post-processing: After recognition, post-processing steps may be applied to improve the accuracy of the extracted text. This could involve spell checking, language model integration, or formatting adjustments.
+
+Tesseract supports various input image formats, including JPEG, PNG, and TIFF, and it can recognize text in multiple languages. Additionally, it provides options for configuring OCR settings to optimize performance for specific use cases.
+
+Many applications and services use Tesseract OCR for tasks such as converting scanned documents into editable text, extracting text from images for indexing or searching, and assisting visually impaired users by reading text aloud from images.
+
+
+
 # Formula-Recoginition
 
 This project is about recognizing a hand written maths formula on a board of chart showing the camera towards what your write. 
